@@ -1,38 +1,44 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'pg'
+gem 'rails_12factor', group: :production
+gem 'bcrypt-ruby', '3.0.0'
+gem 'carrierwave'
+gem "fog", "~> 1.3.1" #required for carrierwave s3
+# gem 'pdfkit'
+gem 'underscore-rails'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+# gem 'devise'
 
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
+  gem 'less-rails-bootstrap'
 end
 
-gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :development, :test do
+  gem 'rspec-rails'
+  # gem 'cucumber-rails'
+  # gem 'database_cleaner'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+  gem 'annotate'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'dotenv-rails'
+  # BetterErrors.editor = :sublime if defined? BetterErrors  (initializer)
+  # http://localhost:3000/__better_errors (reports last exception for debugging)
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  # Add RailsPanel extension in the Chrome Web Store
+end
 
-# To use debugger
-# gem 'debugger'
