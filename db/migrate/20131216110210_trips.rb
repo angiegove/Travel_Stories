@@ -1,7 +1,10 @@
 class Trips < ActiveRecord::Migration
-  def up
-  end
+  def change
+    create_table :trips do |t|
+      t.string :title
+      t.text :description
 
-  def down
+      t.timestamps
+    end
   end
 end

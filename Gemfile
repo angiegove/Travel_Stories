@@ -11,6 +11,7 @@ gem 'underscore-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # gem 'devise'
+gem 'gmapsjs'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -20,10 +21,14 @@ group :assets do
   gem 'less-rails-bootstrap'
 end
 
-
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'shoulda'
   # gem 'cucumber-rails'
   # gem 'database_cleaner'
   gem 'pry-rails'

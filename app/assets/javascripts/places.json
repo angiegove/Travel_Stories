@@ -1,0 +1,20 @@
+[
+    {
+        "image_url": "http://localhost:3000/images/test1.jpg",
+        "lat": "-33.855725",
+        "long": "151.18036",
+        "caption": "yay"
+    },
+    {
+        "image_url": "http://localhost:3000/images/test2.jpg",
+        "lat": "-33.855734",
+        "long": "151.18136",
+        "caption": "test2"
+    },
+    {
+        "image_url": "http://localhost:3000/images/test3.jpg",
+        "lat": "-33.855746",
+        "long": "151.18236",
+        "caption": "test3"
+    }
+]
