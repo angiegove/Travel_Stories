@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 # gem 'devise'
 gem 'gmapsjs'
+gem 'faker'
+gem 'factory_girl_rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -21,14 +23,15 @@ group :assets do
   gem 'less-rails-bootstrap'
 end
 
-group :test do
-  gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
-end
+# group :test do
+#   gem 'cucumber-rails', :require => false
+#   gem 'database_cleaner'
+# end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
   # gem 'cucumber-rails'
   # gem 'database_cleaner'
   gem 'pry-rails'
@@ -38,7 +41,7 @@ group :development, :test do
   gem 'annotate'
 
   gem 'quiet_assets'
-  gem 'better_errors'
+  # gem 'better_errors'
   gem 'dotenv-rails'
   # BetterErrors.editor = :sublime if defined? BetterErrors  (initializer)
   # http://localhost:3000/__better_errors (reports last exception for debugging)

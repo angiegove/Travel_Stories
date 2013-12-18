@@ -1,0 +1,62 @@
+<div class="container">
+<%= form_for @place do |f| %>
+  <div class="row">
+    <form>
+        <fieldset>
+
+<!--             <p>
+                < %= f.label :trip %>
+                < %= f.text_field%>
+            </p> -->
+
+            <div class= 'input-block-level'>
+                <%= f.label :title %>
+                <%= f.text_field :title, :autofocus => true, :placeholder => 'Title'  %>
+            </div>
+
+            <div class= 'input-block-level'>
+                <%= f.label :date %>
+                <%= f.text_field :date%>
+            </div>
+
+            <div class= 'input-block-level'>
+                <%= hidden_field_tag :latitude, [params[:lat]] %>
+            </div>
+
+            <div class= 'input-block-level'>
+                <%= hidden_field_tag :longitude, [params[:lng]] %>
+            </div>
+
+            <div class="controls">
+                <!-- image upload -->
+                <%= image_tag(@place.image) if @place.image? %>
+                <%= f.label :image, 'Image' %>
+                <%= f.file_field :image %>
+            </div>
+
+            <div class="controls">
+                <!-- image upload -->
+                <%= image_tag(@place.image2) if @place.image2? %>
+                <%= f.label :image2, 'Image' %>
+                <%= f.file_field :image2 %>
+            </div>
+
+            <div class="controls">
+                <!-- image upload -->
+                <%= image_tag(@place.image3) if @place.image3? %>
+                <%= f.label :image3, 'Image' %>
+                <%= f.file_field :image3 %>
+            </div>
+
+            <p>
+                <%= f.label :story %>
+                <%= f.text_area :story, :class => 'input-block-level', :placeholder => ' My story goes something like this' %>
+            </p>
+
+            <button type="submit" class="btn btn-warning pull-right">Add My Story</button>
+        </fieldset>
+    </form>
+  </div>
+
+ <% end %>
+</div>

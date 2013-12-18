@@ -9,13 +9,14 @@ development:
   password:
 
 
-# test:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: Travel_Stories_test
-#   pool: 5
-#   username: angiegove
-#   password:
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Travel_Stories_test
+  pool: 5
+  host: localhost
+  username: angiegove
+  password:
 
 production:
   adapter: postgresql

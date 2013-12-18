@@ -14,9 +14,14 @@
 #
 
 class Place < ActiveRecord::Base
-  attr_accessible :story, :title, :trip_id, :longitude, :latitude, :image
+  attr_accessible :story, :title, :trip_id, :longitude, :latitude, :image, :image2, :image3, :date
 
   mount_uploader :image, ImageUploader
+  mount_uploader :image2, ImageUploader
+  mount_uploader :image3, ImageUploader
 
-  has_many :places
+  validates :latitude, :presence => true
+  validates :longitude, :presence => true
+
+  belongs_to :trip
 end
