@@ -1,6 +1,7 @@
 <div class="container">
 <%= form_for @place, :remote => true do |f| %>
   <div class="row">
+    <div class="span3">
     <form>
         <fieldset>
 
@@ -9,23 +10,23 @@
                 < %= f.text_field%>
             </p> -->
 
-            <div class= 'input-block-level'>
+            <div class="span3">
                 <%= f.label :title %>
                 <%= f.text_field :title, :autofocus => true, :placeholder => 'Title'  %>
             </div>
 
-            <div class= 'input-block-level'>
+            <div class="span3">
                 <%= f.label :date %>
-                <%= f.text_field :date%>
+                <%= f.text_field :date, :placeholder => 'Date'%>
             </div>
 
-            <div class= 'input-block-level'>
-                <%= f.text_field :latitude %>
+            <div class="span3">
+                <%= f.hidden_field :latitude %>
                 <!-- f.hidden -->
             </div>
 
-            <div class= 'input-block-level'>
-                <%= f.text_field :longitude %>
+            <div class="span3">
+                <%= f.hidden_field :longitude %>
             </div>
 
             <div class="controls">
@@ -49,15 +50,19 @@
                 <%= f.file_field :image3 %>
             </div>
 
-            <p>
+            <div class="span3">
                 <%= f.label :story %>
-                <%= f.text_area :story, :class => 'input-block-level', :placeholder => ' My story goes something like this' %>
-            </p>
+                <%= f.text_area :story, :class => 'class="span3"', :placeholder => ' My story goes something like this' %>
+            </div>
 
             <%= f.submit 'Add My Story' %>
         </fieldset>
+
     </form>
   </div>
+  </div>
+
 
  <% end %>
 </div>
+

@@ -6,39 +6,34 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaaLS7UMcGsyzeHpIAShkz2WoAVjeaxOo&sensor=true"></script>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Cookie|Homemade+Apple' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Short+Stack|Patrick+Hand+SC|Delius|Delius+Unicase' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
   <div class="row">
-  <div class="col-md-1"></div>
+  <div class="col-md-1"><!-- Start your journey<i class="fa fa-fighter-jet"></i> --></div>
 
 
   <div class="col-md-10">
-    <i class="fa fa-globe"></i>
-    <h1>MY ODYSSEY</h1>
+    <i class="fa fa-globe"></i><h1>MY ODYSSEY</h1>
     <h3>“The world is a book and those who do not travel read only one page.”– St. Augustine</h3>
     <hr></hr>
     <hr></hr>
     <div class='nav-bar'>
 
-      <ul class="nav nav-pills">
 
-        <li class="active"><a href="#">Trips</a></li>
-        <li><a href="#">Pictures</a></li>
-        <li><a href="#">About</a></li>
+    </div>
 
-      </ul>
-
-</div>
-
-<%= yield %>
+  <%= yield %>
     <hr></hr>
     <hr></hr>
-</div>
+  </div>
 
-<div class="col-md-0.5"></div>
+<div class="col-md-1"></div>
 
 </body>
 </html>
