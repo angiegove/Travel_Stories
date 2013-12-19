@@ -1,1 +1,4 @@
 $('#myModal .modal-body').text('saved!')
+map.markers[map.markers.length - 1].setIcon();
+map.markers[map.markers.length - 1].infoWindow.setContent('<%= @place.title %>');
+

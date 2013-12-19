@@ -1,12 +1,29 @@
 body {
   margin: 0 auto;
+  background-image: url("http://bgfons.com/upload/paper_texture278.jpg");
 }
 
+h1 {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 80px;
+  text-align: center
+}
 
+h3 {
+  text-align: center
+}
+
+hr {
+margin-top: 1px;
+margin-bottom: 1px;
+border: 0;
+border-top: 1px solid #0C0B0B;
+
+}
 
 .nav-bar {
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+/*  border-bottom: 5px solid black;
+  border-top: 5px solid black;*/
 }
 
 .nav-pills {

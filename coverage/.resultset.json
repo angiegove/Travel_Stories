@@ -66,6 +66,7 @@
         null,
         null,
         1,
+        1,
         null,
         null,
         1,
@@ -190,6 +191,21 @@
       "/Users/angiegove/Projects/Travel_Stories/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        19,
+        null,
+        null,
+        null,
+        19,
+        19,
+        null,
+        null,
         null
       ],
       "/Users/angiegove/Projects/Travel_Stories/app/helpers/application_helper.rb": [
@@ -199,7 +215,7 @@
       "/Users/angiegove/Projects/Travel_Stories/app/controllers/pages_controller.rb": [
         1,
         1,
-        null,
+        0,
         null,
         null
       ],
@@ -208,6 +224,7 @@
         null,
         1,
         2,
+        2,
         null,
         null,
         1,
@@ -217,10 +234,6 @@
         1,
         4,
         4,
-        2,
-        null,
-        2,
-        null,
         null,
         null,
         1,
@@ -231,7 +244,7 @@
         1,
         5,
         5,
-        2,
+        null,
         null,
         3,
         null,
@@ -265,6 +278,8 @@
         1,
         null,
         1,
+        1,
+        1,
         null,
         1,
         1,
@@ -296,7 +311,7 @@
         null,
         null,
         null,
-        0,
+        30,
         null,
         null,
         null,
@@ -349,6 +364,38 @@
         1,
         null
       ],
+      "/Users/angiegove/Projects/Travel_Stories/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/angiegove/Projects/Travel_Stories/app/models/user.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/angiegove/Projects/Travel_Stories/spec/factories.rb": [
         1,
         null,
@@ -385,6 +432,7 @@
         null
       ],
       "/Users/angiegove/Projects/Travel_Stories/config/routes.rb": [
+        1,
         1,
         1,
         1,
@@ -433,6 +481,6 @@
         null
       ]
     },
-    "timestamp": 1387279658
+    "timestamp": 1387440966
   }
 }

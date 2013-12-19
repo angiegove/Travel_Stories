@@ -14,6 +14,7 @@ gem 'jquery-ui-rails'
 gem 'gmapsjs'
 gem 'faker'
 gem 'factory_girl_rails'
+gem 'font-awesome-less'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -9,24 +9,51 @@
               lng: 151.18036
             });
 
-            var setup_marker = function(map, lat, lng) {
-              map.addMarker({
-                lat: lat,
-                lng: lng,
-                draggable : true,
-                dragend: function(e) {
-                  var position = this.getPosition();
-                  $content.find('#place_latitude').val(position.lat());
-                  $content.find('#place_longitude').val(position.lng());
-                },
-                infoWindow: {
-                  content: $("#myModalBtn")[0]
-                }
-              });
+            var show_story = function(place){
+              $('#story').html('<h2>' + place.title + '</h2><img src="'+ place.image.url +'"><p>' + place.story + '</p><br><img src="'+ place.image2.url +'"><br><img src="'+ place.image3.url +'">')
+            };
+
+            var setup_marker = function(map, place, newRecord) {
+              if (newRecord) {
+                map.addMarker({
+                  lat: place.latitude,
+                  lng: place.longitude,
+                  draggable : true,
+                  dragend: function(e) {
+                    var position = this.getPosition();
+                    $content.find('#place_latitude').val(position.lat());
+                    $content.find('#place_longitude').val(position.lng());
+                  },
+                  infoWindow: {
+                    content: $("#myModalBtn")[0]
+                  },
+                  icon: "/assets/pink_MarkerA.png"
+                });
+
+              }
+              else {
+
+
+                map.addMarker({
+                  lat: place.latitude,
+                  lng: place.longitude,
+                  click: function(){
+                    show_story(place);
+                  },
+                  dragend: function(e) {
+                    var position = this.getPosition();
+                    $content.find('#place_latitude').val(position.lat());
+                    $content.find('#place_longitude').val(position.lng());
+                  },
+                  infoWindow: {
+                    content: "<h2>"+ place.title +"</h2>"
+                  },
+                });
+              }
             }
 
             $.each(places, function(index, place){
-              setup_marker(map, place.latitude, place.longitude)
+              setup_marker(map, place, false)
             });
 
             $('#map_search').submit(function (event) {
@@ -45,8 +72,8 @@
 
                     //console.log(latlng.lat());
                     map.setCenter(latlng.lat(), latlng.lng());
-
-                    setup_marker(map, latlng.lat(), latlng.lng());
+                    var place = { latitude: latlng.lat(), longitude: latlng.lng()}
+                    setup_marker(map, place, true);
                   }
                 }
               });
@@ -67,14 +94,15 @@
                       $content = $('#myModal');
                       $content.find('#place_latitude').val(e.latLng.lat());
                       $content.find('#place_longitude').val(e.latLng.lng());
-
-                      setup_marker(this, e.latLng.lat(), e.latLng.lng());
+                      var place = { latitude: e.latLng.lat(), longitude: e.latLng.lng()}
+                      setup_marker(this, place, true);
                     }
                   }]
                 })
 
               })
             })
+
 
 
             });
