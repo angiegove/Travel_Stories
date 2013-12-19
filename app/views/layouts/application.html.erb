@@ -7,9 +7,29 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <div class="row">
+  <div class="col-md-1"></div>
+
+
+  <div class="col-md-10">
+ <div class='nav-bar'>
+
+  <ul class="nav nav-pills">
+
+    <li class="active"><a href="#">Trips</a></li>
+    <li><a href="#">Pictures</a></li>
+    <li><a href="#">About</a></li>
+
+  </ul>
+</div>
 
 <%= yield %>
+
+</div>
+
+<div class="col-md-1"></div>
 
 </body>
 </html>

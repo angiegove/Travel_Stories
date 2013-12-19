@@ -1,5 +1,5 @@
 <div class="container">
-<%= form_for @place do |f| %>
+<%= form_for @place, :remote => true do |f| %>
   <div class="row">
     <form>
         <fieldset>
@@ -20,11 +20,12 @@
             </div>
 
             <div class= 'input-block-level'>
-                <%= hidden_field_tag :latitude, [params[:lat]] %>
+                <%= f.text_field :latitude %>
+                <!-- f.hidden -->
             </div>
 
             <div class= 'input-block-level'>
-                <%= hidden_field_tag :longitude, [params[:lng]] %>
+                <%= f.text_field :longitude %>
             </div>
 
             <div class="controls">
@@ -53,7 +54,7 @@
                 <%= f.text_area :story, :class => 'input-block-level', :placeholder => ' My story goes something like this' %>
             </p>
 
-            <button type="submit" class="btn btn-warning pull-right">Add My Story</button>
+            <%= f.submit 'Add My Story' %>
         </fieldset>
     </form>
   </div>

@@ -11,9 +11,11 @@
     <div id="story"></div>
 
     <!-- Button trigger modal -->
-<button id="myModalBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<!--button id="myModalBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal
-</button>
+</button-->
+
+<a href="#" id="myModalBtn" data-toggle="modal" data-target="#myModal">Save Place</a>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -38,10 +40,25 @@
     </div>
 
     <script type="text/javascript">
+    var places = <%= raw(Place.all.to_json) %>;
+
     $(document).ready(function(){
       $('#myModalBtn').click(function(){
         $('#myModal').modal();
       });
+
+      // create variable for collection of places
+
+
+      // $.each(places, function(index, value){
+      //   console.log(value)
+      // });
+
+      // loop through it
+
+      // add market for each place
+
+
     })
     </script>
 

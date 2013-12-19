@@ -2,6 +2,7 @@ class  PlacesController < ApplicationController
 
   def index
     @places = Place.all
+    render :json => @places
   end
 
   def new
@@ -10,11 +11,7 @@ class  PlacesController < ApplicationController
 
   def create
     @place = Place.new params[:place]
-    if @place.save
-      redirect_to places_path
-    else
-      render :new
-    end
+    @place.save
   end
 
   def edit
