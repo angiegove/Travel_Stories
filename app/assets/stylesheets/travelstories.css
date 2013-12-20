@@ -57,6 +57,13 @@ li {
 
 #story {
   display: inline;
+  font-family: 'Exo 2', sans-serif;
+}
+
+#story img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid;
 }
 
 .span3 {
@@ -74,4 +81,8 @@ li {
 .place_image {
   margin-left: 40px;
 
+}
+
+.modal-body.saved {
+  display:none;
 }

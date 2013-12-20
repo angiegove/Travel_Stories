@@ -15,6 +15,7 @@ gem 'gmapsjs'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'font-awesome-less'
+gem 'remotipart'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

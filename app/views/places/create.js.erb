@@ -1,4 +1,25 @@
-$('#myModal .modal-body').text('saved!')
-map.markers[map.markers.length - 1].setIcon();
-map.markers[map.markers.length - 1].infoWindow.setContent('<%= @place.title %>');
+$('#myModal .modal-body.form').hide().find('form')[0].reset();
+$('#myModal .modal-body.saved').show();
 
+
+var last_marker = map.markers[map.markers.length - 1];
+
+last_marker.setIcon();
+last_marker.infoWindow.setContent('<h3><%= @place.title %></h3>');
+  console.log(last_marker);
+last_marker.addListener('click', function() {
+  var place = {
+    title: '<%= @place.title %>',
+    image: {
+      url: '<%= @place.image.url %>'
+    },
+    image2: {
+      url: '<%= @place.image2.url %>'
+    },
+    image3: {
+      url: '<%= @place.image3.url %>'
+    },
+    story: '<%= @place.story %>'
+  }
+  show_story(place);
+})

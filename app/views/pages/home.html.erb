@@ -1,22 +1,24 @@
-
-  <body>
-    <div class="input">
-      <form id="map_search">
-      <input type="text" id="address" name="address">
-      <input type="submit" class="btn" value="Search">
-      </form>
-    </div>
-    <div id="map"></div>
-
-    <div id="story"></div>
-
+<div class='row'>
+  <div class="col-md-8">
+  <div class="input">
+        <form id="map_search">
+        <input type="text" id="address" name="address">
+        <input type="submit" class="btn" value="Search">
+        </form>
+      </div>
+      <div id="map"></div>
+  </div>
+  <div class="col-md-4">
+      <div id="story"></div>
+  </div>
+</div>
 
     <!-- Button trigger modal -->
 <!--button id="myModalBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal
 </button-->
 
-<a href="#" id="myModalBtn" data-toggle="modal" data-target="#myModal">Tell My Story</a>
+<!-- <a href="#" id="myModalBtn" data-toggle="modal" data-target="#myModal">Tell My Story</a> -->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -26,8 +28,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Your Story</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body form">
         <%= render 'places/form' %>
+      </div>
+      <div class="modal-body saved">
+        saved!
       </div>
       </div>
     </div><!-- /.modal-content -->
@@ -38,9 +43,7 @@
     var places = <%= raw(Place.all.to_json) %>;
 
     $(document).ready(function(){
-      $('#myModalBtn').click(function(){
-        $('#myModal').modal();
-      });
+
 
       // create variable for collection of places
 
@@ -57,7 +60,6 @@
     })
     </script>
 
-  </body>
 
 
 
